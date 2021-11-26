@@ -16,11 +16,11 @@ function MainContent(props) {
                     }
                 </div>
                 <div className="carousel-inner">
-                    <div className="carousel-item active" style={{backgroundImage: `url('${props.carousel.active.photo}'), linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));`}}>
+                    <div className="carousel-item active" style={{backgroundImage: `url('${props.carousel.active.photo}'), linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7))`}}>
                         <div className="container">
                             <div className="carousel-caption text-start">
                                 <h1>{props.carousel.active.title}</h1>
-                                <p>{props.carousel.active.text}Зроби свій внесок для благоустрою ШБГ "Шаблезуб" - заплати Гордію 100$.</p>
+                                <p>{props.carousel.active.text}</p>
                                 <p><a className="btn btn-lg btn-primary" href="#">Внесок</a></p>
                             </div>
                         </div>
@@ -30,7 +30,7 @@ function MainContent(props) {
                         props.carousel.items.map(value => {
                             return(
                                 <div className="carousel-item">
-                                    <div className="carousel-item active" style={{backgroundImage: `url('${value.photo}'), linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));`}}>
+                                    <div className="carousel-item active" style={{backgroundImage: `url('${value.photo}'), linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7))`}}>
                                         <div className="container">
                                         <div className="carousel-caption">
                                             <h1>{value.title}!</h1>

@@ -1,5 +1,7 @@
 public/static/assets
 
+.vscode
+
 # dependencies
 /node_modules
 /.pnp

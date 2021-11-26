@@ -12,24 +12,19 @@ function News({props}) {
         }
     ] 
 
-    if(togle)
-    {names= 'Сховати' }
-    else {names = 'Переглянути'}
+    if(togle) {
+        names= 'Сховати'
+    }
+    else {
+        names = 'Переглянути'
+    }
     return (
         <div class="album py-5 bg-light">
             <div class="container">
                 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                    <div class="col">
-                 
-                        <NewConteiner props = {props} names={names} mm={mm[0]} togle={togle} settogle = {settogle} image={image} />
-                  
-                    </div>
-                    <div class="col">
-                      
-                    </div>
-                   
-                    
-                    
+                    <div class="col">               
+                        <NewConteiner props = {props} names={names} mm={mm[0]} togle={togle} settogle = {settogle} image={image} />                
+                    </div>     
                 </div>
             </div>
         </div>

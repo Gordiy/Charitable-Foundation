@@ -1,4 +1,9 @@
-import './App.css';
+import {
+	BrowserRouter as Router,
+	Routes,
+	Route,
+	Link
+} from "react-router-dom";
 import SiteHeader from './components/header';
 import Main from './components/main';
 
@@ -38,10 +43,16 @@ function App() {
 	  }
   }
   return (
-	  <div id="app">
-		  <SiteHeader about={headerInfo.about} contacts={headerInfo.contacts}/>
-		  <Main carousel={mainInfo.carousel}/>
-	  </div>
+	  <Router>
+		  <Routes>
+			<Route exact path='/' element={
+				<div>
+					<SiteHeader about={headerInfo.about} contacts={headerInfo.contacts}/>
+					<Main carousel={mainInfo.carousel}/>
+				</div>
+			} />
+		  </Routes>
+	  </Router>
   )
 }
 

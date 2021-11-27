@@ -1,0 +1,28 @@
+.footer{
+    padding: 20px;
+    height: auto;
+    width: auto;
+   display: block;
+margin-left: 27%;
+
+}
+h2{
+    margin-left: 15%;
+}
+.component{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    float:inline-start;
+    width: 10.5vw;
+    height: 7vh;
+}
+.footer2{
+    justify-content: center;
+    padding: 20px;
+    height: auto;
+    width: auto;
+    display: flex;
+    float: left;
+
+}

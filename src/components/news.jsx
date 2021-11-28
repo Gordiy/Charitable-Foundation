@@ -1,5 +1,6 @@
 import React,{useState} from 'react'
 import NewConteiner from './NewContainer';
+
 function News({props}) {
     const [togle,settogle] = useState(true)
     let names;
@@ -23,7 +24,7 @@ function News({props}) {
             <div class="container">
                 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                     <div class="col">               
-                        <NewConteiner props = {props} names={names} mm={mm[0]} togle={togle} settogle = {settogle} image={image} />                
+                        <NewConteiner props = {props} names={names} mm={mm[0]} togle={togle} settogle = {settogle} image={image} />    
                     </div>     
                 </div>
             </div>

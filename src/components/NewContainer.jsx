@@ -1,7 +1,7 @@
-import React from 'react'
- 
+import React from 'react' 
+
 const NewConteiner = (props)=>{
-    console.log(props);
+
     return (
         <div class="card shadow-sm">
             <img src={props.image} width="100%" height="225"/>
@@ -21,5 +21,6 @@ const NewConteiner = (props)=>{
             </div>
         </div>     
     )   
-}
+} 
+
 export default NewConteiner;

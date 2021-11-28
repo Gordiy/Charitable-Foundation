@@ -1,7 +1,14 @@
 import News from './news';
-
+import React,{useState} from 'react';
+import Modalwindow from './Modalwindow';
 function MainContent(props) {
     console.log(props)
+    const [mod,setmod] = useState(false)
+    function toggleModal(){
+        setmod(!mod)
+        console.log(mod);
+    }
+   
     return (
         <main>
             <div id="myCarousel" className="carousel slide" data-bs-ride="carousel">
@@ -15,13 +22,13 @@ function MainContent(props) {
                         })
                     }
                 </div>
-                <div className="carousel-inner">
+                <div className="carousel-inner"  style={{zIndex:0}} >
                     <div className="carousel-item active" style={{backgroundImage: `url('${props.carousel.active.photo}'), linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7))`}}>
-                        <div className="container">
-                            <div className="carousel-caption text-start">
+                        <div className="container"  >
+                            <div className="carousel-caption text-start" >
                                 <h1>{props.carousel.active.title}</h1>
                                 <p>{props.carousel.active.text}</p>
-                                <p><a className="btn btn-lg btn-primary" href="#">Внесок</a></p>
+                                <p><a className="btn btn-lg btn-primary" href="#" onClick={()=>toggleModal() }  >Внесок</a></p>
                             </div>
                         </div>
                     </div>
@@ -35,7 +42,7 @@ function MainContent(props) {
                                         <div className="carousel-caption">
                                             <h1>{value.title}!</h1>
                                             <p>{value.text}Ще у розпал карантину, наша команда ініціювала благодійний збір коштів на боротьбу з коронавірусом.</p>
-                                            <p><a className="btn btn-lg btn-primary" href="#">Внесок</a></p>
+                                            <p><a className="btn btn-lg btn-primary" href="#" onClick={()=>toggleModal()} >Внесок</a></p>
                                         </div>
                                         </div>
                                     </div>
@@ -54,8 +61,10 @@ function MainContent(props) {
                     </button>
                 </div>
             </div>
-
             <News />
+            <Modalwindow mod ={mod} setmod={setmod}/>
+
+   
         </main>
     )
 }
